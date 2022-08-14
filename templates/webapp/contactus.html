@@ -1,0 +1,55 @@
+{% extends "webapp/base.html" %} {% load static %} {% comment %} integrating CSS
+{% endcomment %} {% block css %} {% endblock css %} {% comment %} integrating
+CSS {% endcomment %} {% block title %} Contact us {% endblock title %} 
+{% block start_content %}
+<div class="ContactUs">
+  <div class="ContactUs_Left">
+    <h2>contact us</h2>
+    <p>get in touch with one of our representative now.</p>
+    <ul class="messages">
+      {% for message in messages %}
+      <div style="color: red; background-color: white; font-size: 30">
+        {{message}}
+      </div>
+      {% endfor %}
+    </ul>
+    <form method="POST" class="ContactUs_Left_InputBox" id="ContactUsForm">
+      {% csrf_token %}
+      <input
+        type="text"
+        placeholder="your name"
+        name="fullname"
+        id="fullname"
+        class="ContactUs_Left_InputBox_Input input"
+      />
+      <input
+        type="email"
+        placeholder="email address"
+        name="email"
+        id="email"
+        class="ContactUs_Left_InputBox_Input input"
+      />
+      <input
+        type="text"
+        placeholder="phone number"
+        name="phonenumber"
+        id="phonenumber"
+        class="ContactUs_Left_InputBox_Input input"
+      />
+      <textarea
+        class="ContactUs_Left_InputBox_Textarea input"
+        name="description"
+        placeholder="your message"
+        id="description"
+      ></textarea>
+      <button class="ContactUs_Left_InputBox_Button" type="submit">Send</button>
+    </form>
+  </div>
+  {% comment %} <div class="ContactUs_Right"></div> {% endcomment %}
+  <img src="/media/images/contact.png" width="600" height="600" />
+</div>
+{% endblock start_content %} 
+
+{% block js %}
+<script src="{% static 'js/contactus.js' %}"></script>
+{% endblock js %} {% comment %} integrating JAVASCRIPT {% endcomment %}

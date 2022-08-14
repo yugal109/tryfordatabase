@@ -1,0 +1,34 @@
+{% extends "webapp/base.html" %}
+ {% load static %}
+
+{% comment %} integrating css {% endcomment %}
+ {% block css %}
+{% endblock css %} 
+{% comment %} integrating css {% endcomment %}
+
+{% block title %} team {% endblock title %}
+
+
+{% comment %} integrating html {% endcomment %}
+ {% block start_content %}
+ <div class="Team">
+
+  {% for team in team_members %}
+    <div class="Team_Item">
+      <div class="Team_Item_Image">
+        <img src="/media/{{team.profile_image}}" width="100" height="100"/>
+      </div>
+      <h3>{{team.user.first_name}} {{team.user.last_name}}</h3>
+      <p>{{team.position}}</p>
+    </div>
+{% endfor %}
+  
+ </div>
+{% endblock start_content %} 
+{% comment %} integrating html {% endcomment %}
+
+
+{% comment %} integrating javascript {% endcomment %}
+{% block js %}
+{% endblock js %}
+{% comment %} integrating javascript {% endcomment %}

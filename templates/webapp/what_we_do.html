@@ -1,0 +1,42 @@
+{% extends "webapp/base.html" %}
+ {% load static %}
+
+{% comment %} integrating CSS {% endcomment %}
+ {% block css %}
+{% endblock css %} 
+{% comment %} integrating CSS {% endcomment %}
+
+
+{% block title %} Services {% endblock title %}
+
+
+{% comment %} integrating HTML {% endcomment %}
+ {% block start_content %}
+<div class="Services">
+  {% for service in services %}
+    <div class="Services_Box">
+      <div class="Services_Box_Heading">
+        <div class="Services_Box_Heading_Bottom"></div>
+        <h4>
+          <a class="Link" href="{% url 'main_web:what_we_do_specific' service.title service.id %}">
+  
+        {{service.title}}
+          </a>
+        </h4>
+      </div>
+      
+      <p>
+        {{service.description|truncatechars:300}}
+      </p>
+    </div>
+   {% endfor %%} 
+  </div>
+{% endblock start_content %} 
+{% comment %} integrating HTML {% endcomment %}
+
+
+{% comment %} integrating JAVASCRIPT {% endcomment %}
+{% block js %}
+<script src="{% static 'js/what_we_do.js' %}"></script>
+{% endblock js %}
+{% comment %} integrating JAVASCRIPT {% endcomment %}

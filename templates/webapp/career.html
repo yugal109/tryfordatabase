@@ -1,0 +1,47 @@
+
+{% extends "webapp/base.html" %} {% load static %} {% comment %} integrating CSS
+{% endcomment %} {% block css %} {% endblock css %} {% comment %} integrating
+CSS {% endcomment %} {% block title %} Career {% endblock title %} {% comment %}
+integrating HTML {% endcomment %} 
+
+{% block start_content %}
+
+<div style="display:flex;flex-direction:column;align-items:flex-end">
+
+      <input style="width:200px;margin-right:50px"
+      onclick="location.href={% url 'main_web:apply_jobs' %}"
+
+      value="Apply"
+       type="button" class="ContactUs_Left_InputBox_ButtonSend"/>
+
+<div class="Services">
+
+  {% for career in careers %}
+      <div class="Services_Box">
+        <div class="Services_Box_Heading">
+          <div class="Services_Box_Heading_Bottom"></div>
+          <h4>
+            {{career.vacancy_title}}
+          </h4>
+        </div>
+        <p id="showmore{{career.id}}">
+          {{career.description|truncatechars:300}}
+          <u onclick="handleshowmore('{{career.id}}')" style="color:blue;cursor:pointer">showmore</u>
+        </p>
+        <p style="display:none" id="showless{{career.id}}">
+          {{career.description}}
+          <u onclick="handleshowless('{{career.id}}')" style="color:blue;cursor:pointer">showless</u>
+        </p>
+
+
+        <br/>
+        <h1 style="font-size:25px">Positions Left : {{career.total_positions}} </h1>
+      </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock start_content %}
+
+{% block js %}
+<script src="{% static 'js/career.js' %}"></script>
+{% endblock js%} {% comment %} integrating JAVASCRIPT {% endcomment %}

@@ -1,0 +1,28 @@
+{% extends "webapp/base.html" %} {% load static %} 
+{% block title %} Home {%endblock title %} 
+{% block start_content %}
+
+<div style="display: flex;flex-direction:row;align-items:center ;font-size:30px">
+  <p style="width:800px;height=800px" id="homepage_slider">
+    <img src="/media/images/home1.png" widht="800" height="800" />
+  </p>
+
+  <p style="margin:40px">
+    point zero understands that the web/app is all about user experience, and
+    that's why we're a team of designers, developers, and technologists who love
+    what we do. we believe that a successful and happy customer is our most
+    important asset. our team consists of individuals who have been in the field
+    of software development for many years, with each member having a strong
+    ethical code to consistently provide bright human resources, high-quality
+    products and excellent service. the moral values we nurture and share with
+    our customers are universal: integrity, honesty, reliability. we will always
+    do the best for you.
+    point zero understands that the web/app is all about user experience, and
+    that's why we're a team of designers, developers, and technologists who love.
+  </p>
+</div>
+{% endblock start_content %}
+
+{% block js %} 
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock js %} 

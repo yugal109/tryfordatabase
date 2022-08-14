@@ -1,0 +1,44 @@
+{% extends "webapp/base.html" %} {% load static %} {% comment %} integrating CSS
+{% endcomment %} {% block css %} {% endblock css %} {% comment %} integrating
+CSS {% endcomment %} {% block title %} Application {% endblock title %} {% comment %}
+integrating HTML {% endcomment %} {% block start_content %}
+
+<div class="ContactUs">
+  <div class="ContactUs_Left">
+    <h2>send application</h2>
+    <form method="POST" class="ContactUs_Left_InputBox" enctype="multipart/form-data" id="ApplicationForm">
+      {% csrf_token %}
+      
+      <input
+        type="text"
+        placeholder="enter title.."
+        name="title"
+        class="ContactUs_Left_InputBox_Input input"
+      />
+
+      <textarea
+        class="ContactUs_Left_InputBox_Textarea input"
+        name="subject"
+        placeholder="your message"
+        
+      >
+      </textarea>
+
+    <div class="Career_InputBox">
+      <p>Application</p>
+      <input type="file" name="application_file" class="Career_InputBox_Input" required />
+    </div>
+      <button class="ContactUs_Left_InputBox_Button">Send</button>
+    </form>
+  </div>
+  {% comment %} <div class="ContactUs_Right"></div> {% endcomment %}
+  <img src="/media/images/application.png" width="500" height="500" />
+</div>
+
+{% endblock start_content %}
+
+{% block js %}
+<script src="{% static 'js/application.js' %}"></script>
+
+ {% endblock js%} {% comment %} integrating JAVASCRIPT {% endcomment %}
+

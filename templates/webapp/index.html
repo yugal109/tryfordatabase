@@ -1,0 +1,28 @@
+{% extends "webapp/base.html" %}
+ {% load static %}
+
+{% comment %} integrating CSS {% endcomment %}
+ {% block css %}
+{% comment %} <link rel="stylesheet" href="{% static 'css/index.css' %}" /> {% endcomment %}
+{% endblock css %} 
+{% comment %} integrating CSS {% endcomment %}
+
+{% block title %} Home {% endblock title %}
+
+
+{% comment %} integrating HTML {% endcomment %}
+ {% block start_content %}
+ 
+<h1 id="title">This is shit man.</h1>
+<img src="/media/images/her.jpg"/>
+
+
+{% endblock start_content %} 
+{% comment %} integrating HTML {% endcomment %}
+
+
+{% comment %} integrating JAVASCRIPT {% endcomment %}
+{% block js %}
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock js %}
+{% comment %} integrating JAVASCRIPT {% endcomment %}

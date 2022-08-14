@@ -1,0 +1,45 @@
+{% extends "webapp/base.html" %} {% load static %} {% comment %} integrating CSS
+{% endcomment %} {% block css %} {% endblock css %} {% comment %} integrating
+CSS {% endcomment %} {% block title %} Login {% endblock title %} {% comment %}
+integrating HTML {% endcomment %} {% block start_content %}
+<div class="ContactUs">
+  <div class="ContactUs_Left">
+    <div>
+
+    <h2>login </h2>
+    <p>(only for pointzero members)</p>
+    </div>
+  <ul class="messages">
+      {% for message in messages %}
+      <div style="color:red;background-color:white;font-size:30">{{message}}</div>
+      {% endfor %}
+  </ul>
+
+
+    <form method="POST" class="ContactUs_Left_InputBox" id="LoginForm">
+      {% csrf_token %}
+      
+      <input
+        type="text"
+        placeholder="username"
+        name="username"
+        class="ContactUs_Left_InputBox_Input input"
+      />
+      <input
+        type="password"
+        placeholder="password"
+        name="password"
+        class="ContactUs_Left_InputBox_Input input"
+      />
+      <button type="submit" class="ContactUs_Left_InputBox_ButtonSend">Login</button>
+    </form>
+  </div>
+  {% comment %} <div class="ContactUs_Right"></div> {% endcomment %}
+  <img src="/media/images/login.png" width="600" height="600"/>
+</div>
+{% endblock start_content %}
+
+{% block js %}
+<script src="{% static 'js/login.js' %}"></script>
+ {% endblock js%} {% comment %} integrating JAVASCRIPT {% endcomment %}
+

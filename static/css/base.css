@@ -1,0 +1,711 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+@media only screen and (max-width: 62em) {
+  html {
+    font-size: 54%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  color: black;
+  background: white;
+  font-family: "Roboto Condensed", Times, serif !important;
+}
+
+.bg-1 {
+  background: honeydew !important;
+}
+
+.carousel-inner .item {
+  min-height: 400px;
+  }
+
+.bg-2 {
+  background: grey !important;
+}
+
+.bg-3 {
+  background: royalblue !important;
+}
+
+.Navbar {
+  height: 15rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8rem;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  box-shadow: 0 5px 5px -5px rgba(100, 100, 100, 0.8);
+}
+@media only screen and (max-width: 86.67em) {
+  .Navbar {
+    width: 100vw;
+    padding: 0 1rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .Navbar {
+    padding: 0;
+  }
+}
+.Navbar_Logo {
+  height: auto;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .Navbar_Logo {
+    padding: 0;
+  }
+}
+.Navbar_Logo_Left {
+  width: 19rem;
+  font-size: 3rem;
+  color: black !important;
+  text-decoration: none;
+  text-align: right;
+}
+@media only screen and (max-width: 56.25em) {
+  .Navbar_Logo_Left {
+    width: 14rem;
+  }
+}
+.Navbar_Logo_Left:hover {
+  cursor: pointer;
+}
+.Navbar_Logo_Left h1 {
+  line-height: 5rem;
+  font-size: 6rem;
+  font-weight: 900;
+}
+@media only screen and (max-width: 56.25em) {
+  .Navbar_Logo_Left h1 {
+    font-size: 4.5rem;
+  }
+}
+.Navbar_Logo_Right {
+  margin-left: 0.9rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .Navbar_Logo_Right {
+    margin-left: 0.3rem;
+  }
+}
+.Navbar_Logo_Right_Circle {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin: 0.1rem 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .Navbar_Logo_Right_Circle {
+    height: 2.7rem;
+    width: 2.7rem;
+  }
+}
+.Navbar_Drawer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  display: none;
+}
+@media only screen and (max-width: 56.25em) {
+  .Navbar_Drawer {
+    display: block !important;
+  }
+}
+.Navbar_Drawer_Logo {
+  height: 4rem;
+  width: 4rem;
+  color: black;
+}
+.Navbar_Right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .Navbar_Right {
+    display: none;
+  }
+}
+.Navbar_Right p {
+  box-sizing: content-box;
+  margin: 0 1rem;
+  font-size: 3rem;
+  line-height: 7rem;
+  padding: 0 3rem;
+  color: black;
+  transition: all 1s ease;
+}
+.Navbar_Right p:hover {
+  margin-top: 5px;
+  cursor: pointer;
+  transform: scaleX(1.05);
+  border-bottom: 3px solid #1a1919;
+}
+.Navbar_Right p:active {
+  transform: scaleX(1);
+}
+
+.Link {
+  color: black !important;
+  text-decoration: none;
+}
+
+.Services {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 auto;
+  max-width: 140rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.Services_Box {
+  width: 60rem;
+  height: 30rem;
+  margin: 2rem;
+}
+.Services_Box_Heading {
+  height: 9rem;
+  margin-bottom: 5px;
+  position: relative;
+}
+.Services_Box_Heading:hover {
+  margin: 0 !important;
+}
+.Services_Box_Heading_Bottom {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  border-bottom: 5px solid #1a1919;
+}
+.Services_Box_Heading h4 {
+  line-height: 8rem;
+  font-size: 3rem;
+  letter-spacing: 0.05rem;
+  transition: all 1s ease-in;
+  animation: textSize 1.5s ease-out;
+  margin-bottom: 1rem;
+  width: 25rem;
+}
+.Services_Box_Heading h4:hover {
+  margin-top: 5px;
+  cursor: pointer;
+  border-bottom: 5px solid #1a1919;
+}
+.Services_Box p {
+  font-size: 2rem;
+}
+
+.Services_Box_Heading:hover + .Services_Box_Heading_Bottom {
+  display: block !important;
+}
+
+.Blogs {
+  height: auto;
+  padding: 0 10rem;
+  width: 100%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 100em) {
+  .Blogs {
+    padding: 0 5rem;
+  }
+}
+.Blogs_Top {
+  width: 85rem;
+  margin-left: 10rem;
+}
+@media only screen and (max-width: 86.67em) {
+  .Blogs_Top {
+    width: 100%;
+    margin-left: 3rem;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .Blogs_Top {
+    margin-left: 1rem;
+  }
+}
+.Blogs_Top h1 {
+  font-size: 4.5rem;
+}
+.Blogs_Top p {
+  font-size: 2.3rem;
+  color: black;
+}
+.Blogs_Posts {
+  height: auto;
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 30rem;
+}
+.Blogs_Posts_Item {
+  height: 50rem;
+  width: 32rem;
+  background: #1a1919;
+  margin: 2rem auto;
+}
+.Blogs_Posts_Item_Image {
+  height: 50%;
+  width: 100%;
+}
+.Blogs_Posts_Item_Bottom {
+  height: 50%;
+  width: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+.Blogs_Posts_Item_Bottom_Top {
+  height: 5rem;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Blogs_Posts_Item_Bottom_Top_Left {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+.Blogs_Posts_Item_Bottom_Top_Left_Logo {
+  height: 3rem;
+  width: 3rem;
+  font-size: 2rem;
+  fill: black;
+}
+.Blogs_Posts_Item_Bottom_Top_Left p {
+  font-size: 2rem;
+  color: black;
+}
+.Blogs_Posts_Item_Bottom_Top_Right {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+.Blogs_Posts_Item_Bottom_Top_Right p {
+  font-size: 2rem;
+  color: black;
+}
+.Blogs_Posts_Item_Bottom_Heading {
+  height: auto;
+  color: black;
+  width: 80%;
+  margin: 0 auto;
+}
+.Blogs_Posts_Item_Bottom_Heading h2 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+.Blogs_Posts_Item_Bottom_End {
+  height: auto;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.Blogs_Posts_Item_Bottom_End p {
+  font-size: 2rem;
+  color: #1a1919;
+}
+
+.AboutUs {
+  max-width: 130rem;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.AboutUs p {
+  width: 60rem;
+  font-size: 2.5rem;
+  animation: sliding 1.5s ease-in-out;
+}
+@media only screen and (max-width: 37.5em) {
+  .AboutUs p {
+    width: 100%;
+  }
+}
+
+.App {
+  height: auto;
+  width: 130rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 75em) {
+  .App {
+    width: 100%;
+  }
+}
+.App_Box {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5rem 0;
+}
+@media only screen and (max-width: 37.5em) {
+  .App_Box {
+    flex-direction: column;
+  }
+}
+.App_Box_Left {
+  flex: 0 0 40%;
+  min-height: 25rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 3rem;
+}
+.App_Box_Left p {
+  font-size: 2.3rem;
+  color: black;
+  margin: 2rem 0;
+  height: 4rem;
+  transition: all 1s ease;
+}
+.App_Box_Left p:hover {
+  cursor: pointer;
+}
+.App_Box_Right {
+  flex: 1;
+  height: 100%;
+  padding: 1rem;
+}
+.App_Box_Right h2 {
+  font-size: 3rem;
+  line-height: 6rem;
+}
+.App_Box_Right p {
+  font-size: 2.3rem;
+  color: black;
+  animation: opacity 2s ease-in;
+}
+
+.SingleBlog {
+  height: auto;
+  max-width: 130rem;
+  margin: 0 auto;
+  width: 100%;
+}
+.SingleBlog h1 {
+  font-size: 7rem;
+  line-height: 8.5rem;
+  text-align: center;
+  margin: 4rem 1rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .SingleBlog h1 {
+    font-size: 5rem;
+  }
+}
+.SingleBlog p {
+  font-size: 2.7rem;
+  color: black;
+  margin: 2.5rem 1rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .SingleBlog p {
+    font-size: 2.3rem;
+  }
+}
+
+.Career {
+  width: 130rem;
+  height: auto;
+  margin: 4rem auto;
+}
+@media only screen and (max-width: 86.67em) {
+  .Career {
+    width: 98%;
+  }
+}
+.Career p {
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  margin: 0 0.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .Career p {
+    font-size: 2.5rem;
+  }
+}
+.Career p strong {
+  color: #1a1919;
+}
+.Career_Box {
+  margin: 5rem 0;
+}
+.Career_InputBox {
+  height: auto;
+  width: 70rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 2rem auto;
+}
+@media only screen and (max-width: 37.5em) {
+  .Career_InputBox {
+    width: 93%;
+  }
+}
+.Career_InputBox p {
+  font-size: 2rem;
+  color: black;
+}
+.Career_InputBox_Submit {
+  background: white;
+  height: 6rem;
+  width: 100%;
+  color: black;
+  font-size: 2rem;
+  border-radius: 0.8rem;
+  border: 1px solid black;
+  outline: none;
+  margin: 0.5rem 0;
+}
+.Career_InputBox_Submit:hover {
+  cursor: pointer;
+}
+.Career_InputBox_Input {
+  height: 6rem;
+  width: 100%;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 0 1rem;
+  background: #c2bbbb;
+}
+
+.ContactUs {
+  width: 130rem;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 86.67em) {
+  .ContactUs {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .ContactUs {
+    flex-direction: column;
+  }
+}
+.ContactUs_Left {
+  height: auto;
+  flex: 1;
+  padding: 0 2rem;
+}
+@media only screen and (max-width: 62em) {
+  .ContactUs_Left {
+    height: auto;
+    width: 100%;
+    padding: 0 5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .ContactUs_Left {
+    padding: 0 1rem;
+  }
+}
+.ContactUs_Left h2 {
+  font-size: 4.5rem;
+  line-height: 5rem;
+}
+.ContactUs_Left p {
+  font-size: 3rem;
+  color: black;
+  line-height: 5rem;
+}
+.ContactUs_Left_InputBox {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 2rem 0;
+}
+.ContactUs_Left_InputBox_Button {
+  height: 6rem;
+  width: 100%;
+  color: black;
+  background: white !important;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+.ContactUs_Left_InputBox_Button:hover {
+  cursor: pointer;
+}
+.ContactUs_Left_InputBox_ButtonSend {
+  width: 100%;
+  height: 5rem;
+  border-radius: 0.5rem;
+  background: white !important;
+  font-size: 2rem;
+  color:black;
+  border:1px solid black;
+  margin: 1rem 0;
+}
+.ContactUs_Left_InputBox_ButtonSend:hover {
+  cursor: pointer;
+}
+.ContactUs_Left_InputBox_Input {
+  height: 6rem;
+  background: #c2bbbb;
+  width: 100%;
+  margin: 1rem 0;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: black;
+}
+.ContactUs_Left_InputBox_Textarea {
+  height: 15rem;
+  width: 100%;
+  background: #c2bbbb;
+  margin: 1rem 0;
+  padding: 1rem;
+  resize: vertical;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  color: black;
+}
+.ContactUs_Right {
+  height: 50rem;
+  flex: 1;
+  background: red;
+}
+@media only screen and (max-width: 62em) {
+  .ContactUs_Right {
+    height: 50rem;
+    width: 100%;
+    padding: 0 5rem;
+  }
+}
+
+.Team {
+  max-width: 140rem;
+  width: 98%;
+  height: auto;
+  margin: 5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.Team_Item {
+  height: auto;
+  padding: 2rem 0.5rem;
+  margin: 1.5rem;
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.5rem;
+}
+@media only screen and (max-width: 86.67em) {
+  .Team_Item {
+    width: 29%;
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  .Team_Item {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .Team_Item {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .Team_Item {
+    width: 80%;
+    margin: 1.5rem auto;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .Team_Item {
+    width: 95%;
+    margin: 1rem auto;
+  }
+}
+.Team_Item h3 {
+  color: black;
+  font-size: 3.5rem;
+}
+.Team_Item p {
+  color: black;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.Team_Item_Image {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  background: white;
+}

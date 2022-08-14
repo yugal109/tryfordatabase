@@ -1,0 +1,49 @@
+<nav class="Navbar">
+  <div class="Navbar_Logo">
+    <div class="Navbar_Logo_Left">
+      <a class="Link" href="{% url 'main_web:home' %}">
+        <h1>&lt;/point zero&gt;</h1>
+    </a>
+    </div>
+    <div class="Navbar_Logo_Right">
+      <div class="Navbar_Logo_Right_Circle bg-1"></div>
+      <div class="Navbar_Logo_Right_Circle bg-2"></div>
+      <div class="Navbar_Logo_Right_Circle bg-3"></div>
+    </div>
+  </div>
+  <div class="Navbar_Drawer">
+    <i class="fa-solid fa-bars Navbar_Drawer_Logo fa-xl"></i>
+  </div>
+  <div class="Navbar_Right">
+
+    <i style="font-size:40px"  class="fa-solid fa-bars"></i>
+    <i style="font-size:40px"  class="fa-solid fa-xmark"></i>
+
+    <p id="NavService">
+      <a class="Link" href="{% url 'main_web:what_we_do' %}"> service </a>
+    </p>
+
+    <p id="NavAbout">
+      <a class="Link" href="{% url 'main_web:about' %}"> about </a>
+    </p>
+    <p id="NavProduct">
+      <a class="Link" href="{% url 'main_web:products' %}"> product </a>
+    </p>
+    <p id="NavCareer">
+      <a class="Link" href="{% url 'main_web:career' %}">career </a>
+    </p> 
+    {% comment %} <p>
+      <a href="{% url 'main_web:blogs' %}"> blog </a>
+    </p> {% endcomment %}
+
+    <p id="NavContact">
+      <a class="Link" href="{% url 'main_web:contactus' %}"> contact </a> </p>
+{% if user.is_authenticated %}
+    <p id="logout">
+      <a class="Link" href="{% url 'main_web:logout' %}">logout </a>
+    </p> 
+{% endif %}
+
+
+  </div>
+</nav>

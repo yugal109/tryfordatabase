@@ -1,0 +1,46 @@
+{% extends "webapp/base.html" %} {% load static %} {% comment %} integrating CSS
+{% endcomment %} {% block css %} {% endblock css %} {% comment %} integrating
+CSS {% endcomment %} {% block title %} Web-Dev {% endblock title %} 
+{% block start_content %}
+<div class="App">
+  <div class="App_Box">
+    <div class="App_Box_Left">
+      <img src="/media/{{service.image}}" width="400" height="400" />
+    </div>
+    <div class="App_Box_Right">
+      <h2>{{service.title}}</h2>
+      <p>{{service.description}}</p>
+    </div>
+  </div>
+  <div class="App_Box">
+    <div class="App_Box_Left">
+      {% for subservice in sub_services %}
+
+        <p
+          onclick="handle('{{subservice.id}}')"
+          class="title_class"
+          id="title-{{subservice.id}}"
+        >
+          {{subservice.title}}
+        </p>
+      {% endfor %}
+    </div>
+    <div class="App_Box_Right">
+      {% for subservice in sub_services %}
+      <p
+        class="description_class"
+        style="display: none"
+        id="description-{{subservice.id}}"
+      >
+        {{subservice.description}}
+      </p>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock start_content %} 
+{% block js %}
+<script src="{% static 'js/service.js' %}"></script>
+{% endblock js %} {% comment %} integrating JAVASCRIPT {% endcomment %}

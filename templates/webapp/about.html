@@ -1,0 +1,23 @@
+{% extends "webapp/base.html" %} {% load static %} {% comment %} integrating CSS
+{% endcomment %} {% block css %} {% endblock css %} {% comment %} integrating
+CSS {% endcomment %} {% block title %} About {% endblock title %} {% comment %}
+integrating HTML {% endcomment %} {% block start_content %}
+<div class="AboutUs">
+  <img src ="/media/images/aboutus.png" widht="300" height="500" />
+  <p>
+    pointzero understand that the web is all about user experience, and that's
+    why we're a team of designers, developers and technologists who love what we
+    do. We have built websites and apps that look fantastic, work seamlessly
+    across all platforms, and make your life easier. we are a web and mobile
+    development company in nepal. we specialize in building websites, developing
+    apps and engaging clients throughout the country. our focus on great work
+    and strong client relationships helps us create value for every client we
+    work with.
+  </p>
+</div>
+{% endblock start_content %}
+
+{% block js %}
+<script src="{% static 'js/about.js' %}"></script>
+
+ {% endblock js%} {% comment %} integrating JAVASCRIPT {% endcomment %}
